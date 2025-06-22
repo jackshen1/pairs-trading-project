@@ -4,7 +4,7 @@ This project implements a cointegration-based statistical arbitrage strategy to 
 
 It includes both a **static regression strategy** (using a fixed relationship from a training period) and a **dynamic rolling regression strategy** (recalculating over a moving window). These are applied across multiple stock markets — including Indian, UK, and US equities — to study generalizability and robustness.
 
-### 📈 What It Does
+### What It Does
 
 - Uses **linear regression** on a training set to model pair relationships.
 - Tests for **cointegration** using the Engle-Granger test.
@@ -17,7 +17,7 @@ It includes both a **static regression strategy** (using a fixed relationship fr
   - **Daily volatility**
   - **Max drawdown**
 
-### 🧪 Analysis and Insights
+### Analysis and Insights
 
 - **Static model** worked well for a period on certain Indian stock pairs (e.g., HDFCBANK and ICICIBANK), but eventually broke down — visualized through spread divergence.
 - **Dynamic rolling regression** consistently failed to generalize across most stock pairs tested, providing a useful caution against overfitting.
@@ -27,14 +27,14 @@ It includes both a **static regression strategy** (using a fixed relationship fr
   - Volatility: `0.018322`  
   - Sharpe Ratio: `0.70`
 
-### ⚙️ Technical Highlights
+### Technical Highlights
 
 - Backtesting built in **Python** using `pandas`, `numpy`, `matplotlib`, `statsmodels`, and `yfinance`.
 - Strategy logic is modularized into `strategy.py`.
 - Batch testing of pairs and performance logging handled via `run_pairs.ipynb`.
 - Deeper case study and diagnostics in `static_model.ipynb`.
 
-### 📁 Outputs
+### Outputs
 
 - A `.csv` file logging performance of all tested stock pairs.
 - Cumulative return plots saved for every pair.
